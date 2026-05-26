@@ -1,0 +1,24 @@
+<section class="section-bar">Resultados</section>
+
+<section class="page-body" aria-labelledby="page-title">
+  <h1 id="page-title" class="visually-hidden">Resultados</h1>
+
+  <table class="data-table" aria-label="Resultados de votacion">
+    <thead>
+      <tr>
+        <th>Tipo Candidato</th>
+        <th>Candidato</th>
+        <th>Votos</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (result of results; track result.tipoCandidato + result.candidato) {
+        <tr>
+          <td>{{ result.tipoCandidato }}</td>
+          <td>{{ result.candidato }}</td>
+          <td>{{ result.votos }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</section>

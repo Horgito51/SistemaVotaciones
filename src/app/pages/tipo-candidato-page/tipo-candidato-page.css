@@ -1,0 +1,63 @@
+:host {
+  display: block;
+}
+
+.section-bar {
+  height: 39px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background: #5da5dd;
+  color: #fff;
+  font-size: 13px;
+}
+
+.page-body {
+  min-height: calc(100dvh - 111px);
+  position: relative;
+  background: #fff;
+}
+
+.start-process {
+  position: absolute;
+  top: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.start-process button {
+  height: 32px;
+  border: 0;
+  border-radius: 0;
+  padding: 0 16px;
+  background: #5a9bd7;
+  color: #fff;
+  font-size: 12px;
+  cursor: default;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 720px) {
+  .section-bar {
+    height: 38px;
+  }
+
+  .page-body {
+    min-height: 360px;
+  }
+
+  .start-process {
+    top: 52px;
+  }
+}

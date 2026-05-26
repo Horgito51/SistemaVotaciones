@@ -1,0 +1,182 @@
+:host {
+  display: block;
+}
+
+.section-bar {
+  height: 39px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background: #5da5dd;
+  color: #fff;
+  font-size: 13px;
+}
+
+.page-body {
+  min-height: calc(100dvh - 111px);
+  background: #fff;
+  color: #253447;
+  font-size: 12px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px 7px 10px;
+}
+
+.toolbar label {
+  margin-right: 48px;
+  color: #39475a;
+}
+
+.toolbar input {
+  width: 170px;
+  height: 32px;
+  border: 1px solid #cfcfcf;
+  padding: 0 8px;
+  font-size: 12px;
+}
+
+.toolbar button {
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #d8d8d8;
+  background: #f7f7f7;
+  color: #485465;
+  padding: 0 9px 0 12px;
+  font-size: 12px;
+  cursor: default;
+}
+
+.toolbar svg {
+  width: 14px;
+  height: 14px;
+  fill: #8c9196;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.data-table th,
+.data-table td {
+  height: 33px;
+  padding: 0 10px;
+  text-align: left;
+}
+
+.data-table th {
+  border-bottom: 1px solid #bdbdbd;
+  color: #26394f;
+  font-weight: 400;
+}
+
+.data-table th + th {
+  border-left: 1px solid #c9c9c9;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: #f4f4f4;
+}
+
+.data-table tbody tr {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.data-table th:nth-child(1),
+.data-table td:nth-child(1) {
+  width: 20%;
+}
+
+.data-table th:nth-child(2),
+.data-table td:nth-child(2) {
+  width: 22%;
+}
+
+.data-table th:nth-child(3),
+.data-table td:nth-child(3) {
+  width: 22%;
+}
+
+.data-table th:nth-child(4),
+.data-table td:nth-child(4) {
+  width: 22%;
+}
+
+.data-table th:nth-child(5),
+.data-table td:nth-child(5) {
+  width: 14%;
+  text-align: center;
+}
+
+.data-table a {
+  color: #00f;
+  text-decoration: underline;
+}
+
+.data-table input[type='checkbox'] {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: #5da5dd;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .toolbar {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .toolbar label {
+    margin-right: 12px;
+  }
+
+  .toolbar input {
+    width: min(170px, calc(100vw - 220px));
+  }
+
+  .data-table {
+    min-width: 980px;
+  }
+
+  .page-body {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .toolbar {
+    gap: 6px;
+  }
+
+  .toolbar label {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .toolbar input {
+    width: 150px;
+  }
+
+  .toolbar button {
+    padding: 0 8px;
+  }
+}

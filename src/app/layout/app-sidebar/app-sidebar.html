@@ -1,0 +1,20 @@
+<aside class="sidebar" aria-label="Menu principal">
+  <nav class="menu">
+    @for (item of menuItems; track item.label) {
+      <a
+        class="menu-item"
+        [routerLink]="item.route"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path [attr.d]="item.icon"></path>
+        </svg>
+        <span>{{ item.label }}</span>
+        @if (item.expandable) {
+          <span class="chevron" aria-hidden="true"></span>
+        }
+      </a>
+    }
+  </nav>
+</aside>
